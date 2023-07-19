@@ -1,20 +1,24 @@
+import { NavLink } from "react-router-dom";
 import React from 'react'
 import { Link } from 'react-router-dom';
 import "./Landing.styles.css";
-import Pikachu from '../../assets/Imagen1.jpg'
 
+const handleButtonClick = () => {
+
+}
 const Landing = () =>{
 	return (
-		<div className="componentContainer">
+		<div className="landing">
 			<div className="welcomeContainer">
-				<h1 className="title">
-					Welcome to an Awesome Pokemon App
+				<h1 className="titulo">
+					BIENVENIDO AL MUNDO POKEMON
 				</h1>
-				<h2 className="title">Click Pikachu</h2>
+				<div className="boton">
 				<Link to="/home">
-					<img src={Pikachu} alt="pikachu-chocolate" />
+					<button className="button"onClick={handleButtonClick}><NavLink to="/home"> HOME </NavLink></button>
 				</Link>
 			</div>
+		</div>
 		</div>
 	);
 };

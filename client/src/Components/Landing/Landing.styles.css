@@ -1,24 +1,78 @@
-.componentContainer {
+.landing{
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 90vh;
-	width: 90vw;
+	flex-direction: column-reverse;
+	background-image: url(../../assets/Imagen3.jpg);
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: auto;
+    margin-left: auto;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
 }
+.titulo{
+    font-size: 500%;
 
-.title {
-	margin: 0;
 }
 
 .welcomeContainer {
 	display: flex;
 	justify-content: center;
-	flex-direction: column;
-	width: 600px;
-	height: 600px;
-	background-color: antiquewhite;
-border-radius: 100%;
-
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-		rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	width: 100px;
+	height: 100px;
+    position: relative;
+    top: -1000px;
+    bottom: 0px;
+    left: -250px;
+    right: 0;
+    text-shadow: -5px 8px 2px rgba(13,19,33,0.6);
+    color: #ffff;
 }
+
+.boton{
+    position: relative;
+    top: 700px;
+    left: -250px;
+}
+
+.button{
+    position: relative;
+    background: linear-gradient(86deg,#ffc300 0%, #ffea00 40%, #ffc300 80%);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 7px 14px;
+    transition: 0.5s;
+    text-shadow: 0px 4px 2px rgba(0,0,0,0.4);
+    border-radius: 18px 18px 18px 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.button:hover{
+    background: linear-gradient(86deg,#ffc300 0%, #ffea00 40%, #ffc300 80%);
+    color: #fff;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px #ccff33;
+}
+
+.button:before{
+    content: "";
+    position: relative;
+    inset: 2px;
+    background: #27282c;
+}
+
+.button link{
+    position: relative;
+    z-index: -1;
+}
+

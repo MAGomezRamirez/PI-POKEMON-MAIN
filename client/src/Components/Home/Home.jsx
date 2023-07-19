@@ -1,27 +1,25 @@
-// import React, { useEffect, useState } from "react";
-// import * as actions from "../../Redux/action";
-// import { useDispatch, useSelector } from "react-redux";
-// import Cards from "../Cards/Cards.jsx";
-// import style from "./Home.module.css";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux"
+import { getAllPokemons } from "../../Redux/action";
 
-// const Home = () => {
-// 	const dispatch = useDispatch();
-// 	const pokemons = useSelector((state) => state.filtered);
-// 	const [loading, setLoading] = useState(true);
+const Home = () =>{
+    const pokemons = useSelector((state)=> state.pokemons);
+    const dispatch = useDispatch();
 
-// 	useEffect(() => {
-// 		!pokemons.length
-// 			? dispatch(actions.getAllPokemons()).then(() => {
-// 					setLoading(false);
-// 			  })
-// 			: setLoading(false);
-// 	}, []);
+    useEffect(()=>{
+        dispatch(getAllPokemons());
+    }, [dispatch]);
 
-// 	return (
-// 		<div className={style.homeContainer}>
-// 			<Cards loading={loading} pokemons={pokemons} />
-// 		</div>
-// 	);
-// };
+    return (
+        <div>
+            <h1>Holaa</h1>
+            {pokemons.map((pokemon)=>(
+                <div key={pokemon.id}>
+                    <p>{pokemon.name}</p>
+                </div>
+            ))}
+        </div>
+    )
+}
 
-// export default Home;
+export default Home;
